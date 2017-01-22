@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <title>PLANEJECONQUISTE</title>
 </head>
@@ -83,7 +84,7 @@
                 <div class="col-md-8 post-space">
                     <div class="uk-child-width-1-2@m" uk-grid>
                         <div>
-                            <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                            <div class="uk-card uk-card-default wow slideInLeft" data-wow-duration="1s">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
                                         <img src="img/cover.jpg" alt="">
@@ -106,7 +107,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                            <div class="uk-card uk-card-default wow slideInRight" data-wow-duration="1s">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
                                         <img src="img/cover.jpg" alt="">
@@ -129,7 +130,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                            <div class="uk-card uk-card-default wow slideInLeft" data-wow-duration="1s">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
                                         <img src="img/cover.jpg" alt="">
@@ -152,7 +153,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                            <div class="uk-card uk-card-default wow slideInRight" data-wow-duration="1s">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
                                         <img src="img/cover.jpg" alt="">
@@ -209,6 +210,10 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/uikit.min.js"></script>
+        <script type="text/javascript" src="js/wow.js"></script>
+        <script>
+            new WOW().init();
+        </script>
 </body>
 
 </html>
