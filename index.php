@@ -164,6 +164,7 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
+                                        $('#form1')[0].reset();
 
                                     }
                                 });
