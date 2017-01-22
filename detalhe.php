@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php
-    include('first/functions.php'); 
-    $post = gettblPostUrl(filter_input(INPUT_GET, 'url'));
-?>
-
-<head>
-    <base href="/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <title>PLANEJECONQUISTE</title>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-90726734-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</head>
+<?php include('head.php'); ?>
 
 <body>
     <header>
@@ -78,27 +51,9 @@
       </article>
     </section>
 
-    <footer>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-4">
-                    <a href="#"><img src="Logo.png" width="280px" alt=""></a>
-                </div>
-                <div class="col-md-8 links_footer">
-                    <div class="col-md-4"><a href="">SOBRE O BLOG</a></div>
-                    <div class="col-md-4"><a href="">FINANÇAS PESSOAIS</a></div>
-                    <div class="col-md-4"><a href="">MATERIAIS GRATUITOS</a></div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
+    <?php include('footer.php'); ?>
 
-    <p class="text-center">@2017Planejeconquiste. Todos os direitos reservados.</p>
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/uikit.min.js"></script>
 
 </body>
 

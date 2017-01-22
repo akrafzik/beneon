@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <title>PLANEJECONQUISTE</title>
-    <base href="/">
-
-
-
-</head>
-
-<link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<?php include('head.php'); ?>
 
 <body>
     <header>
@@ -111,31 +91,7 @@
             </div>
         </div>
 
-        <footer>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-4">
-                        <a href="#"><img src="Logo.png" width="280px" alt=""></a>
-                    </div>
-                    <div class="col-md-8 links_footer">
-                        <div class="col-md-4"><a href="">SOBRE O BLOG</a></div>
-                        <div class="col-md-4"><a href="">FINANÇAS PESSOAIS</a></div>
-                        <div class="col-md-4"><a href="">MATERIAIS GRATUITOS</a></div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <p class="text-center">@2017Planejeconquiste. Todos os direitos reservados.</p>
-
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/uikit.min.js"></script>
-        <script type="text/javascript" src="js/wow.js"></script>
-        <script>
-            new WOW().init();
-        </script>
+        <?php include('footer.php'); ?>
 
 
 
