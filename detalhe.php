@@ -4,6 +4,7 @@
     include('first/functions.php'); 
     $post = gettblPostUrl(filter_input(INPUT_GET, 'url'));
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,16 @@
     <link rel="stylesheet" href="css/uikit.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <title>PLANEJECONQUISTE</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90726734-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
 <body>
@@ -42,9 +53,9 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                             <div class="post-heading">
-                                <h1>Title</h1>
-                                <h2 class="subheading">Subtitle</h2>
-                                <span class="meta">Posted by <a href="#">Author</a> on Date</span>
+                                <h1><?=$post['postTitulo']?></h1>
+                                <!--<h2 class="subheading">Subtitle</h2>-->
+                                <span class="meta">Posted on <?=$post['postData']?></span>
                             </div>
                         </div>
                     </div>
