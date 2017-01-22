@@ -24,7 +24,7 @@ header('Access-Control-Allow-Origin: *');
 	}
 	else if ( $exec == "scroll" ) {
         $pg = filter_input( INPUT_POST, 'pg' );
-        $registros = getRegistros( $pg );
+        $registros = getRegistrosPost( $pg );
         $pg += 1;
         $html = '';
         $slideIn = "slideInLeft";
@@ -64,7 +64,7 @@ header('Access-Control-Allow-Origin: *');
     }
     else if ( $exec == "maisLidos" ) {
         $pg = filter_input( INPUT_POST, 'pg' );
-        $registros = getRegistrosPost( $pg, $filter, "order by postAcesso", 5);
+        $registros = getRegistrosPost( $pg, $filter, array("field" => "postAcessos", "direction" => "desc"), 5);
         $pg += 1;
         $html = '';
         $slideIn = "slideInLeft";
