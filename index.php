@@ -44,17 +44,18 @@
                 <div class="col-md-8">
                     <div class="form_register">
                         <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
+                            <input type="hidden" value="cadastrarLead" name="exec">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" placeholder="Digite o seu nome">
+                                    <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" placeholder="Digite o seu email">
+                                    <input type="email" name="emailLead" class="form-control" placeholder="Digite o seu email" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -148,6 +149,23 @@
                     getPagination(1, 'scroll', 'res');
                     $("#trigger").html("true");
                     getPagination(1, 'maisLidos', 'post_read');
+
+
+
+                    function cadastrarLead(){
+                        setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: $("#form1").serialize(),
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        console.log(data);
+                                    }
+                                });
+                            }, 1000);
+                    }
                 </script>
 
 
