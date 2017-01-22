@@ -240,10 +240,10 @@ body{
 .navbar-default .navbar-nav>li>a:visited,
 .navbar-default .navbar-nav>li>a:active,
 .navbar-default .navbar-nav>li>a:hover  {
-    color: #fff;
+    color: #fff!important;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 5px #000;
     font-weight: 900;
 }
 
