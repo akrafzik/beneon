@@ -884,7 +884,7 @@
                             $ordering = " order by ". $order["field"]. " ".$order["direction"];
                         }
                         $sql = "SELECT 
-                                    postID, postTitulo, postResumo, postDescricao, postImagem, postData, url(postTitulo) 
+                                    postID, postTitulo, postResumo, postDescricao, postImagem, postData, url(postTitulo) as url
                                 FROM tblPost
                                 ".$where." ".$ordering."
                                 limit " . $itens . " offset " . $pg * $itens;
