@@ -4,6 +4,7 @@ $(function() {
             $(".navbar").addClass("menuEffect");
         } else {
             $(".navbar").removeClass("menuEffect");
+            $("#logo-img").attr('src','img/LogoBranco.png');
         }
     });
     $('.glyphicon-chevron-down').addClass('animated bounce');
