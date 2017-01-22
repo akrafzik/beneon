@@ -27,9 +27,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="link" href="#">Home<br> <span class="glyphicon glyphicon-home"></span></a></li>
-                        <li><a class="link" href="#">Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
-                        <li><a class="link " href="#">Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <li><a class="link" href="#home" uk-scroll>Home<br> <span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a class="link" href="#posts" uk-scroll>Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
+                        <li><a class="link " href="#form_cad" uk-scroll>Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
                     </ul>
                     <!-- <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -38,12 +38,15 @@
                 </div>
             </div>
         </nav>
-        <section class='img_cover'>
-            <div class="backgroud-cover"></div>
+
+        <section id="home" class='img_cover'>
+            <div class="backgroud-cover">
+              </div>
+            </div>
         </section>
     </header>
 
-    <section class="main_content">
+    <section class="main_content" id="form_cad">
         <div class="row">
             <div class="container-fluid">
                 <div class="col-md-4">
@@ -78,7 +81,7 @@
             </div>
     </section>
 
-    <section class="posts">
+    <section id="posts" class="posts">
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-8 post-space">
