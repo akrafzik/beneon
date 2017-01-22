@@ -80,6 +80,7 @@ body{
   padding: 20px;
   padding-top: 24px;
   padding-bottom: 34px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .form-horizontal{
@@ -92,6 +93,11 @@ body{
   padding-bottom: 20px:
 }
 
+.main_post_description{
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .description_text{
   height: 100%;
   width: 100%;
@@ -99,17 +105,84 @@ body{
   padding: 20px;
   font-size: 3em;
   color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .post-space{
   padding: 100px;
+  padding-bottom: 10px;
 }
+
+.uk-card-footer a{
+  text-decoration: none!important;
+}
+
+.uk-card-footer a:hover{
+  text-decoration: none!important;
+  background-color: #a2cdd5!important;
+  color: #fff;
+}
+
+.reading{
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: #a2cdd5;
+  padding: 10px;
+  border: 1px solid #a2cdd5;
+  font-weight: 900;
+}
+
+.load{
+  padding-top: 20;
+  margin-top: 28px;
+}
+
+.load a:hover{
+  text-decoration: none;
+  color: #66CDAA;
+}
+
+.glyphicon-refresh{
+  font-size: 40px;
+}
+
 /* Menu */
 
 .navbar-default .navbar-nav>li>a , .navbar-default .navbar-nav>li>a:visited  {
     color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
 }
 
 .navbar-default .navbar-nav>li>a:hover{
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer{
+  height: auto;
+  width: 100%;
+  background-color: #ccc;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.links_footer{
+  padding-top: 20px;
+}
+
+/* Post */
+
+.title_post{
+  margin-top: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Fim Post */
+
+@media (max-width: 768px)
+{
+  .navbar-header
+   {
+    height: 89px!important;
+   }
 }

@@ -7,79 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
     <title>planejeconquiste</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#"><img src="Logo.png" width="280px" alt=""></a>
+            </div>
 
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-                    <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Sobre o Blog </br><span class="glyphicon glyphicon-home"></span></a></li>
-                        <li><a href="#">Finanças pessoais <br> <span class="glyphicon glyphicon-book"></span></a></li>
-                        <li><a href="#">Materiais Gratuitos <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
-                    </ul>
-                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="link" href="#">Home </br><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li><a class="link" href="#">Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
+                    <li><a class="link " href="#">Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
+                </ul>
+            </div>
         </nav>
-        <section class='img_cover'></section>
+        <section class='img_cover'>
+            <div class="backgroud-cover"></div>
+        </section>
     </header>
 
-    <section class="main_content">
-      <div class="container">
-        <div class="row">
-            <h1 class="col-md-8 ">Title Title Title Title Title Title Title Title Title Title Title Title </h1>
-            <div class="clearfix"></div>
-            <div class="col-md-12">
-                Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
-                Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
-                Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
-                Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
-                Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
+    <section class="main_post_description">
+        <div class="container">
+            <div class="row">
+                <h1 class="col-md-8 title_post"> Title </h1>
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                    Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br> Content Content Content Content Content Content Content Content Content Content Content Content Content
+                    Content Content Content <br> Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br> Content Content Content Content Content Content Content Content Content
+                    Content Content Content Content Content Content Content <br> Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content <br>
+                </div>
             </div>
         </div>
-      </div>
     </section>
 
-    <footer >
-            <div class="row" style="background-color:#D9D9D9;">
-                <div class="col-md-4 col-md-offset-1">
-                    <img src="img/logo.png">
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <a href="#"><img src="Logo.png" width="280px" alt=""></a>
                 </div>
-                <div class="col-md-2">
-                    <a href="">Sobre o blog</a>
-                </div>
-                <div class="col-md-2">
-                    <a href="">Finanças Pessoais</a>
-                </div>
-                <div class="col-md-2">
-                    <a href="">Materiais Gratuitos</a>
+                <div class="col-md-8 links_footer">
+                    <div class="col-md-4"><a href="">SOBRE O BLOG</a></div>
+                    <div class="col-md-4"><a href="">FINANÇAS PESSOAIS</a></div>
+                    <div class="col-md-4"><a href="">MATERIAIS GRATUITOS</a></div>
                 </div>
             </div>
-            
-            <div class="row">
-                 <div class="col-md-10 col-md-offset-1">
-                    <span>© PlanejeConquiste. Todos os direitos reservados</span>
-                </div>
-            </div>
+        </div>
     </footer>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js">
-    </script>
+    <p class="text-right">@2017Planejeconquiste. Todos os direitos reservados.</p>
 
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/uikit.min.js"></script>
 
 </body>
 
