@@ -153,7 +153,7 @@
                     function getPagination(pg, request, target) {
                         if ($("#trigger").html() === "true") {
                             $("#trigger").html("false");
-                            $("#res").fadeTo("slow", 0.3);
+                            $("#" + target).fadeTo("slow", 0.3);
                             setTimeout(function () {
                                 $.ajax({
                                     type: "POST",
@@ -166,7 +166,7 @@
                                     processData: true,
                                     success: function (data) {
                                         if (data.results !== "") {
-                                            $("#res").append(data.results);
+                                            $("#" + target).append(data.results);
                                             setTimeout(function () {
                                                 if (data.totalItens < 1) {
                                                     $("#trigger").html("false");
@@ -187,6 +187,7 @@
                         }
                     }
                     getPagination(1, 'scroll', 'res');
+                    $("#trigger").html("true");
                     getPagination(1, 'maisLidos', 'post_read');
                 </script>
 
