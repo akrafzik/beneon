@@ -53,13 +53,15 @@ body{
   padding: 70px;
 }
 .backgroud-cover h1 {
-  margin-top: 80px;
+  position: absolute;
   text-align: center;
   color: rgba(255,255,255,1);
-  font-size: 100px;
+  font-size: 80px;
+  top: 300px;
 }
 
 /* end img_cover*/
+
 /*detalhe page css*/
 .intro-header {
   background-color: #777777;
@@ -247,8 +249,8 @@ body{
     font-weight: 900;
 }
 
-.message_top{
-  
+#message_top span{
+  font-size: 50px;
 }
 
 .navbar-default li:hover{

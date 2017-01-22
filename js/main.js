@@ -6,4 +6,5 @@ $(function() {
             $(".navbar").removeClass("menuEffect");
         }
     });
+    $('.glyphicon-chevron-down').addClass('animated bounce');
 });
