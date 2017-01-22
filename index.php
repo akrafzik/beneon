@@ -61,6 +61,7 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                    <span id="msg"></span>
                                 </div>
                             </div>
                         </form>
@@ -161,7 +162,9 @@
                                     dataType: 'json',
                                     processData: true,
                                     success: function (data) {
-                                        console.log(data);
+                                        //console.log(data);
+                                        $("#msg").html(data.message);
+
                                     }
                                 });
                             }, 1000);
