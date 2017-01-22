@@ -872,7 +872,7 @@
 
 
 /*************************/
-                function getRegistros( $pg = 1, $itens = 2 ) {
+                function getRegistrosPost( $pg = 1, $filter, $order, $itens = 2 ) {
                         global $pdo;
                         $pg -=1;
                         $sql = "SELECT 
