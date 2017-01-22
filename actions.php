@@ -49,7 +49,7 @@ header('Access-Control-Allow-Origin: *');
                                     </p>
                                 </div>
                                 <div class="uk-card-footer text-right">
-                                    <a href="'.$registro['url'].'" class="reading"><span> Continue Lendo</span></a>
+                                    <a href="detalhes/'.$registro['url'].'" class="reading"><span> Continue Lendo</span></a>
                                 </div>
                             </div>
                         </div>';
@@ -69,10 +69,10 @@ header('Access-Control-Allow-Origin: *');
         $html = '';
         $slideIn = "slideInLeft";
         foreach ( $registros as $registro ) {
-            $html .= '<a href="" class="">
+            $html .= '<a href="detalhes/'.$registro['url'].'" class="">
 		                    <div class="row">
 		                        <div class="col-md-6">
-		                            <img src="first/upload/img/tblPosts/'.$registro['postImagem'].'" alt="">
+		                            <img src="first/upload/img/tblPost/'.$registro['postImagem'].'" alt="">
 		                        </div>
 		                        <div class="col-md-6">
 		                            '.nl2br($registro['postResumo']).'
