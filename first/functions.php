@@ -529,12 +529,14 @@
                     (postTitulo,
                         postResumo,
                         postDescricao,
-                        postImagem)
+                        postImagem,
+                        postData)
                     values
                     (:postTitulo,
                         :postResumo,
                         :postDescricao,
-                        :postImagem)" );
+                        :postImagem,
+                        now())" );
                         $stmt->execute(
                                 array(
                                     ":postTitulo" => $fields["postTitulo"],
@@ -866,4 +868,23 @@
                     }
                     insertLogs("update", "Registro alterado com sucesso! (tblBannerHome)");
                     return array( "status" => true, "message" => "Registro alterado com sucesso!", "ID" => $pk);
-                } ?>
+                } 
+
+
+/*************************/
+                function getRegistros( $pg = 1, $itens = 2 ) {
+                        global $pdo;
+                        $pg -=1;
+                        $sql = "SELECT 
+                                    postID, postTitulo, postResumo, postDescricao, postImagem, postData, url(postTitulo) 
+                                FROM tblPost
+                                limit " . $itens . " offset " . $pg * $itens;
+                        $results = array();
+                        foreach ( $pdo->query( $sql ) as $row ) {
+                            $results[] = $row;
+                        }
+                        return $results;
+                    }
+
+
+                ?>
