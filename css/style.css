@@ -53,11 +53,11 @@ body{
   padding: 70px;
 }
 .backgroud-cover h1 {
-  position: absolute;
+  font-family: 'Krona One', sans-serif;
+  margin-top: 140px;
   text-align: center;
-  color: rgba(255,255,255,1);
+  color: #F8F8FF;
   font-size: 80px;
-  top: 300px;
 }
 
 /* end img_cover*/
@@ -265,7 +265,7 @@ body{
 footer{
   height: auto;
   width: 100%;
-  background-color: #ccc;
+  background-color: #F0FFF0;
   padding-top: 40px;
   padding-bottom: 40px;
 }
