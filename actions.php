@@ -54,10 +54,10 @@ header('Access-Control-Allow-Origin: *');
                             </div>
                         </div>';
             if($slideIn == "slideInLeft"){
-            	$slideIn == "slideInRight";
+            	$slideIn = "slideInRight";
             }
             else{
-				$slideIn == "slideInLeft";
+				$slideIn = "slideInLeft";
             }
         }
         die( json_encode( array( "results" => $html, "pg" => $pg, "totalItens" => count( $registros ) ) ) );
