@@ -41,7 +41,11 @@
 
         <section id="home" class='img_cover'>
             <div class="backgroud-cover">
+
+              <h1>Qual o seu próximo sonho?</h1>
+
             </div>
+
             </div>
         </section>
     </header>
@@ -85,7 +89,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-8 post-space">
-                    <div class="uk-child-width-1-2@m" uk-grid>
+                    <div class="uk-child-width-1-2@m" id="res" uk-grid>
                         <div>
                             <div class="uk-card uk-card-default wow slideInLeft" data-wow-duration="1s">
                                 <div class="uk-inline-clip">
@@ -239,6 +243,63 @@
         <script>
             new WOW().init();
         </script>
+
+
+
+
+        <span id="page" style="display:none">1</span>
+                <span id="trigger" style="display:none">true</span>
+
+                <script src=js/jquery.min.js></script>
+
+                <script>
+                    $(document).ready(function () {
+                        $(window).scroll(function (event) {
+                            if ($('body').height() <= ($(window).height() + 400 + $(window).scrollTop())) {
+                                getPagination($("#page").html());
+                            }
+                        });
+                    });
+                    function getPagination(pg) {
+                        if ($("#trigger").html() === "true") {
+                            $("#trigger").html("false");
+                            $("#res").fadeTo("slow", 0.3);
+                            setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: {
+                                        exec: 'scroll',
+                                        pg: pg
+                                    },
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        if (data.results !== "") {
+                                            $("#res").append(data.results);
+                                            setTimeout(function () {
+                                                if (data.totalItens < 5) {
+                                                    $("#trigger").html("false");
+                                                }
+                                                else {
+                                                    $("#trigger").html("true");
+                                                }
+                                                $("#page").html(data.pg);
+                                            }, 500);
+                                        }
+                                        else {
+                                            $("#res").append('<div class="col-md-12"><h3>Sem Mais Resultados...</h3></div>');
+                                        }
+                                        $("#res").fadeTo("slow", 1);
+                                    }
+                                });
+                            }, 1000);
+                        }
+                    }
+                    getPagination(1);
+                </script>
+
+
 </body>
 
 </html>
