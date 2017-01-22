@@ -108,10 +108,6 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.post-space{
-  padding: 100px;
-  padding-bottom: 10px;
-}
 
 .uk-card-footer a{
   text-decoration: none!important;
@@ -172,9 +168,17 @@ footer{
 
 /* Post */
 
+.post-space{
+  padding: 20px;
+}
+
 .title_post{
   margin-top: 20px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.display_block{
+  display: inline-flex;
 }
 
 /* Fim Post */
