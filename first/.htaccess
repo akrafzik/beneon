@@ -1,0 +1,36 @@
+RewriteEngine on
+RewriteBase /first/
+
+RewriteCond %{REQUEST_URI} index\.php
+RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/ [R=301,L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+                RewriteRule alterar-usuarios/([a-z,0-9,A-Z,_-]+)/ gerenciar-usuarios.php?id=$1
+                RewriteRule alterar-usuarios/([a-z,0-9,A-Z,_-]+) gerenciar-usuarios.php?id=$1
+
+                RewriteRule inserir-usuarios/ gerenciar-usuarios.php
+                RewriteRule inserir-usuarios gerenciar-usuarios.php
+                
+                RewriteRule alterar-posts/([a-z,0-9,A-Z,_-]+)/ gerenciar-posts.php?id=$1
+                RewriteRule alterar-posts/([a-z,0-9,A-Z,_-]+) gerenciar-posts.php?id=$1
+
+                RewriteRule inserir-posts/ gerenciar-posts.php
+                RewriteRule inserir-posts gerenciar-posts.php
+                
+                RewriteRule alterar-leed/([a-z,0-9,A-Z,_-]+)/ gerenciar-leed.php?id=$1
+                RewriteRule alterar-leed/([a-z,0-9,A-Z,_-]+) gerenciar-leed.php?id=$1
+
+                RewriteRule inserir-leed/ gerenciar-leed.php
+                RewriteRule inserir-leed gerenciar-leed.php
+                
+                RewriteRule alterar-banner/([a-z,0-9,A-Z,_-]+)/ gerenciar-banner.php?id=$1
+                RewriteRule alterar-banner/([a-z,0-9,A-Z,_-]+) gerenciar-banner.php?id=$1
+
+                RewriteRule inserir-banner/ gerenciar-banner.php
+                RewriteRule inserir-banner gerenciar-banner.php
+                
