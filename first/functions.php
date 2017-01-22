@@ -491,6 +491,32 @@
                         exit;
                     }
                 }
+
+                function gettblPostUrl( $url ) {
+                    global $pdo, $img;
+                    try {
+                        $sql = "select P.postID,
+                    P.postTitulo,
+                    P.postResumo,
+                    P.postDescricao,
+                    (concat('".$img."tblPost/',P.postImagem)) as foto,
+                    P.postImagem, url(postTitulo) as url
+                     from tblPost P
+                            url(postTitulo) = :post";
+                        $query = $pdo->prepare( $sql );
+
+                        $query->bindParam( ":post", $url );
+                        $query->execute();
+
+                        foreach ( $query->fetchAll() as $row ) {
+                            return $row;
+                        }
+                    }
+                    catch ( PDOException $e ) {
+                        return false;;
+                        exit;
+                    }
+                }
                 function gettblPostPaginacao( $pg = 1, $filtro = NULL, $qtd = 20 ) {
                     global $img;
 

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    include('first/functions.php'); 
+    $post = gettblPostUrl(filter_input(INPUT_GET, 'url'));
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
