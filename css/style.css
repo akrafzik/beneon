@@ -1,12 +1,12 @@
 body{
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .navbar{
   margin: 0;
   height: auto;
   border-radius: 0;
-  background-color: transparent;
+  background-color:rgba(255, 255, 255, 0.3);
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -14,7 +14,7 @@ body{
 }
 
 .menuEffect{
-  background-color: #fff;
+  background:rgba(0, 0, 0, 0.3);
 }
 
 .backgroundMenu{
@@ -50,14 +50,13 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-bottom: 1px solid rgba(0,0,0,0.9);
 }
 
 .backgroud-cover{
   height: 100%;
   width: 100%;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /* end img_cover*/
@@ -77,3 +76,42 @@ body{
 }
 
 /* Fim menu */
+
+/* .content_show */
+
+.content_show{
+  height: auto;
+  width: 100%;
+  background-image: url('../img/midle.jpg');
+  padding: 40px;
+}
+
+.display_info{
+  background-color: rgba(0,255,255,0.6);
+  height: 256px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.dsplay_form{
+  text-align: center;
+  height: auto;
+  font-weight: 900;
+  font-size: 20px;
+  color: #000;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.form-register{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 12px;
+}
+
+/* .content_show */
