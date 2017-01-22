@@ -2,6 +2,11 @@ body{
   background-color: #fff;
 }
 
+.row{
+  padding: 0!important;
+  margin: 0!important;
+}
+
 .navbar{
   margin: 0;
   height: auto;
@@ -30,7 +35,6 @@ body{
 }
 
 .glyphicon-home, .glyphicon-book, .glyphicon-pencil{
-  position: relative;
   margin-top: 20px;
   color: #fff;
 }
@@ -62,9 +66,44 @@ body{
 /* end img_cover*/
 
 .main_content{
-  height: 800px;
+  background-image: url('../img/midle.jpg');
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
+.form_register{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 20px;
+  padding-top: 24px;
+  padding-bottom: 34px;
+}
+
+.form-horizontal{
+  margin-top: 30px;
+}
+
+.posts{
+  height: auto;;
+  padding-top: 20px:
+  padding-bottom: 20px:
+}
+
+.description_text{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,255,255,0.6);
+  padding: 20px;
+  font-size: 3em;
+  color: #fff;
+}
+
+.post-space{
+  padding: 100px;
+}
 /* Menu */
 
 .navbar-default .navbar-nav>li>a , .navbar-default .navbar-nav>li>a:visited  {
@@ -74,44 +113,3 @@ body{
 .navbar-default .navbar-nav>li>a:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* Fim menu */
-
-/* .content_show */
-
-.content_show{
-  height: auto;
-  width: 100%;
-  background-image: url('../img/midle.jpg');
-  padding: 40px;
-}
-
-.display_info{
-  background-color: rgba(0,255,255,0.6);
-  height: 256px;
-  color: #fff;
-  font-weight: 900;
-  font-size: 20px;
-  padding-top: 50px;
-  padding-left: 20px;
-}
-
-.dsplay_form{
-  text-align: center;
-  height: auto;
-  font-weight: 900;
-  font-size: 20px;
-  color: #000;
-  background-color: #fff;
-  padding: 20px;
-}
-
-.form-register{
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  text-align: center;
-  padding-top: 12px;
-}
-
-/* .content_show */
