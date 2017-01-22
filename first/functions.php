@@ -499,6 +499,7 @@
                     P.postTitulo,
                     P.postResumo,
                     P.postDescricao,
+                    DATE_FORMAT(p.postData,'%d/%m/%Y') as postData,
                     (concat('".$img."tblPost/',P.postImagem)) as foto,
                     P.postImagem, url(postTitulo) as url
                      from tblPost P
