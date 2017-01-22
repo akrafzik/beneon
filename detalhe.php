@@ -1,4 +1,8 @@
 <?php include('head.php'); ?>
+<?php
+    include('first/functions.php'); 
+    $post = gettblPostUrl(filter_input(INPUT_GET, 'url'));
+?>
 
 <body>
     <header>
