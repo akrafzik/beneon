@@ -1,1 +1,37 @@
+.navbar{
+  margin: 0;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
 
+.navbar-collapse > ul > li > a{
+  height: 79px;
+}
+
+.navbar-right{
+  text-align: center;
+}
+
+.glyphicon-home, .glyphicon-book, .glyphicon-pencil{
+  position: relative;
+  margin-top: 20px;
+}
+
+.navbar-right ul li a:hover{
+  cursor: pointer;
+}
+
+/* img_cover */
+
+.img_cover{
+  height: 700px;
+  width: 100%;
+}
+
+
+
+/* end img_cover*/
