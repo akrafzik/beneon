@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-md-4 wow slideInRight" data-wow-duration="1s">
                     <div class="col-md-12">
-                        <div class="post_read">
+                        <div class="post_read" id="post_read">
                             <p class="title_reads"> Posts Mais Lidos </p>
                             <!-- =] -->
                         </div>
@@ -146,27 +146,27 @@
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
                             if ($('body').height() <= ($(window).height() + 400 + $(window).scrollTop())) {
-                                getPagination($("#page").html());
+                                getPagination($("#page").html(), 'scroll', 'res');
                             }
                         });
                     });
-                    function getPagination(pg, target) {
+                    function getPagination(pg, request, target) {
                         if ($("#trigger").html() === "true") {
                             $("#trigger").html("false");
-                            $("#res").fadeTo("slow", 0.3);
+                            $("#" + target).fadeTo("slow", 0.3);
                             setTimeout(function () {
                                 $.ajax({
                                     type: "POST",
                                     url: "actions.php",
                                     data: {
-                                        exec: target,
+                                        exec: request,
                                         pg: pg
                                     },
                                     dataType: 'json',
                                     processData: true,
                                     success: function (data) {
                                         if (data.results !== "") {
-                                            $("#res").append(data.results);
+                                            $("#" + target).append(data.results);
                                             setTimeout(function () {
                                                 if (data.totalItens < 1) {
                                                     $("#trigger").html("false");
@@ -178,15 +178,16 @@
                                             }, 500);
                                         }
                                         else {
-                                            $("#res").append('<div class="col-md-12"><h3>Sem Mais Resultados...</h3></div>');
+                                            $("#" + target).append('<div class="col-md-12"><h3>Sem Mais Resultados...</h3></div>');
                                         }
-                                        $("#res").fadeTo("slow", 1);
+                                        $("#" + target).fadeTo("slow", 1);
                                     }
                                 });
                             }, 1000);
                         }
                     }
                     getPagination(1, 'scroll', 'res');
+                    $("#trigger").html("true");
                     getPagination(1, 'maisLidos', 'post_read');
                 </script>
 
