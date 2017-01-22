@@ -26,29 +26,7 @@ header('Access-Control-Allow-Origin: *');
         $pg = filter_input( INPUT_POST, 'pg' );
         //$registros = getRegistros( $pg );
         $pg += 1;
-        $html = '<div class="uk-grid-margin uk-first-column">
-                            <div class="uk-card uk-card-default wow '.$slideIn.'" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: '.$slideIn.';">
-                                <div class="uk-inline-clip">
-                                    <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
-                                        <img src="img/cover.jpg" alt="">
-                                        <div class="uk-position-center">
-                                            <div class="uk-transition-slide-top-small">
-                                                <h4 class="uk-margin-remove">Planeje</h4></div>
-                                            <div class="uk-transition-slide-bottom-small">
-                                                <h4 class="uk-margin-remove">Conquiste</h4></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Top</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum nemo aspernatur, asperiores adipisci quis doloribus vitae
-                                    </p>
-                                </div>
-                                <div class="uk-card-footer text-right">
-                                    <a href="#" class="reading"><span> Continue Lendo</span></a>
-                                </div>
-                            </div>
-                        </div>';
+        $html = '';
         $slideIn = "slideInLeft";
         foreach ( $registros as $registro ) {
             $html .= '<div class="uk-grid-margin uk-first-column">
@@ -65,12 +43,13 @@ header('Access-Control-Allow-Origin: *');
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
-                                    <h3 class="uk-card-title">Media Top</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum nemo aspernatur, asperiores adipisci quis doloribus vitae
+                                    <h3 class="uk-card-title">'.$registro['postTitulo'].'</h3>
+                                    <p>
+                                    	'.nl2br($registro['postResumo']).'
                                     </p>
                                 </div>
                                 <div class="uk-card-footer text-right">
-                                    <a href="#" class="reading"><span> Continue Lendo</span></a>
+                                    <a href="'.$registro['url'].'" class="reading"><span> Continue Lendo</span></a>
                                 </div>
                             </div>
                         </div>';
