@@ -872,12 +872,21 @@
 
 
 /*************************/
-                function getRegistrosPost( $pg = 1, $filter, $order, $itens = 2 ) {
+                function getRegistrosPost( $pg = 1, $filter = null, $order = null, $itens = 2 ) {
                         global $pdo;
                         $pg -=1;
+                        $where = "";
+                        $ordering = "";
+                        if($filter != null){
+                            $where = "";
+                        }
+                        if($order != ""){
+                            $ordering = " order by ". $order["field"]. " ".$order["direction"];
+                        }
                         $sql = "SELECT 
                                     postID, postTitulo, postResumo, postDescricao, postImagem, postData, url(postTitulo) 
                                 FROM tblPost
+                                ".$where." ".$ordering."
                                 limit " . $itens . " offset " . $pg * $itens;
                         $results = array();
                         foreach ( $pdo->query( $sql ) as $row ) {

@@ -24,7 +24,7 @@ header('Access-Control-Allow-Origin: *');
 	}
 	else if ( $exec == "scroll" ) {
         $pg = filter_input( INPUT_POST, 'pg' );
-        $registros = getRegistros( $pg );
+        $registros = getRegistrosPost( $pg );
         $pg += 1;
         $html = '';
         $slideIn = "slideInLeft";
@@ -33,7 +33,7 @@ header('Access-Control-Allow-Origin: *');
                             <div class="uk-card uk-card-default wow '.$slideIn.'" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: '.$slideIn.';">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
-                                        <img src="upload/tblPosts/'.$registro['postImagem'].'" alt="">
+                                        <img src="first/upload/img/tblPost/'.$registro['postImagem'].'" alt="">
                                         <div class="uk-position-center">
                                             <div class="uk-transition-slide-top-small">
                                                 <h4 class="uk-margin-remove">Planeje</h4></div>
@@ -64,7 +64,7 @@ header('Access-Control-Allow-Origin: *');
     }
     else if ( $exec == "maisLidos" ) {
         $pg = filter_input( INPUT_POST, 'pg' );
-        $registros = getRegistrosPost( $pg, $filter, "order by postAcesso", 5);
+        $registros = getRegistrosPost( $pg, $filter, array("field" => "postAcessos", "direction" => "desc"), 5);
         $pg += 1;
         $html = '';
         $slideIn = "slideInLeft";
@@ -72,7 +72,7 @@ header('Access-Control-Allow-Origin: *');
             $html .= '<a href="" class="">
 		                    <div class="row">
 		                        <div class="col-md-6">
-		                            <img src="upload/tblPosts/'.$registro['postImagem'].'" alt="">
+		                            <img src="first/upload/img/tblPosts/'.$registro['postImagem'].'" alt="">
 		                        </div>
 		                        <div class="col-md-6">
 		                            '.nl2br($registro['postResumo']).'
