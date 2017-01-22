@@ -34,6 +34,14 @@ body{
   margin-top: 20px;
 }
 
+.logo-normal{
+  background-image: url('../img/Logo.png');
+}
+
+.logo-scrool{
+  background-image: url('../img/LogoBranco.png');
+}
+
 /* img_cover */
 
 .img_cover{
