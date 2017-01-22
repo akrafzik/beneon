@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-md-4 wow slideInRight" data-wow-duration="1s">
                     <div class="col-md-12">
-                        <div class="post_read">
+                        <div class="post_read" id="post_read">
                             <p class="title_reads"> Posts Mais Lidos </p>
                             <!-- =] -->
                         </div>
@@ -146,7 +146,7 @@
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
                             if ($('body').height() <= ($(window).height() + 400 + $(window).scrollTop())) {
-                                getPagination($("#page").html());
+                                getPagination($("#page").html(), 'scroll', 'res'));
                             }
                         });
                     });
