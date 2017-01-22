@@ -671,13 +671,12 @@
                     (:leedNome,
                         :leedEmail,
                         :leedIP,
-                        :leedData)" );
+                        now())" );
                         $stmt->execute(
                                 array(
                                     ":leedNome" => $fields["leedNome"],
                         ":leedEmail" => $fields["leedEmail"],
-                        ":leedIP" => $fields["leedIP"],
-                        ":leedData" => $fields["leedData"]
+                        ":leedIP" => $_SERVER['REMOTE_ADDR']
                                 )
                         );
                         $erro = $stmt->errorInfo();
