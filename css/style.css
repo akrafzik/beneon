@@ -55,7 +55,7 @@ body{
 .backgroud-cover{
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.4);
   padding: 70px;
 }
 /* end img_cover*/
@@ -237,8 +237,8 @@ body{
     font-size: 16px;
 }
 
-.navbar-default{
-  background-color: rgba(0, 0, 0, 0.5);
+.navbar-default li:hover{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 footer{
