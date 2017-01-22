@@ -1,11 +1,12 @@
 <?php 
+header('Access-Control-Allow-Origin: *');  
 	include('first/functions.php'); 
 	$exec = filter_input( INPUT_POST, "exec" );
-	if ( $exec == "" ) {
+	if ( $exec == "cadastrarLead" ) {
 		$nomeLead = filter_input( INPUT_POST, "nomeLead" );
 		$emailLead = filter_input( INPUT_POST, "emailLead", FILTER_SANITIZE_EMAIL );
 		$arrNome = explode(" ", trim($nomeLead));
-		
+		  
 
 		if ($nomeLead == "") {
 		    die(json_encode(array("status" => false, "message" => "Seu nome é obrigatório")));
@@ -20,6 +21,66 @@
 		}
 		
 		die(json_encode(inserttblLeed( array("leedNome" => $nomeLead, "leedEmail" => $emailLead) )));
-
 	}
+	else if ( $exec == "scroll" ) {
+        $pg = filter_input( INPUT_POST, 'pg' );
+        //$registros = getRegistros( $pg );
+        $pg += 1;
+        $html = '<div class="uk-grid-margin uk-first-column">
+                            <div class="uk-card uk-card-default wow '.$slideIn.'" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: '.$slideIn.';">
+                                <div class="uk-inline-clip">
+                                    <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
+                                        <img src="img/cover.jpg" alt="">
+                                        <div class="uk-position-center">
+                                            <div class="uk-transition-slide-top-small">
+                                                <h4 class="uk-margin-remove">Planeje</h4></div>
+                                            <div class="uk-transition-slide-bottom-small">
+                                                <h4 class="uk-margin-remove">Conquiste</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Media Top</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum nemo aspernatur, asperiores adipisci quis doloribus vitae
+                                    </p>
+                                </div>
+                                <div class="uk-card-footer text-right">
+                                    <a href="#" class="reading"><span> Continue Lendo</span></a>
+                                </div>
+                            </div>
+                        </div>';
+        $slideIn = "slideInLeft";
+        foreach ( $registros as $registro ) {
+            $html .= '<div class="uk-grid-margin uk-first-column">
+                            <div class="uk-card uk-card-default wow '.$slideIn.'" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: '.$slideIn.';">
+                                <div class="uk-inline-clip">
+                                    <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
+                                        <img src="img/cover.jpg" alt="">
+                                        <div class="uk-position-center">
+                                            <div class="uk-transition-slide-top-small">
+                                                <h4 class="uk-margin-remove">Planeje</h4></div>
+                                            <div class="uk-transition-slide-bottom-small">
+                                                <h4 class="uk-margin-remove">Conquiste</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body">
+                                    <h3 class="uk-card-title">Media Top</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint nostrum nemo aspernatur, asperiores adipisci quis doloribus vitae
+                                    </p>
+                                </div>
+                                <div class="uk-card-footer text-right">
+                                    <a href="#" class="reading"><span> Continue Lendo</span></a>
+                                </div>
+                            </div>
+                        </div>';
+            if($slideIn == "slideInLeft"){
+            	$slideIn == "slideInRight";
+            }
+            else{
+				$slideIn == "slideInLeft";
+            }
+        }
+        die( json_encode( array( "results" => $html, "pg" => $pg, "totalItens" => count( $registros ) ) ) );
+    }
 ?>
