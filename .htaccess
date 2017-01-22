@@ -10,8 +10,8 @@ RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
-                RewriteRule detalhes/([a-z,0-9,A-Z,_-]+)/ detalhes.php?url=$1
-                RewriteRule detalhes/([a-z,0-9,A-Z,_-]+) detalhes.php?url=$1
+                RewriteRule detalhes/([a-z,0-9,A-Z,_-]+)/ detalhe.php?url=$1
+                RewriteRule detalhes/([a-z,0-9,A-Z,_-]+) detalhe.php?url=$1
 
                 
                 
