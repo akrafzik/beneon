@@ -20,8 +20,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="link" href="#">Home </br><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li><a class="link" href="#">Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
+                    <li><a class="link" href="/">Home </br><span class="glyphicon glyphicon-home"></span></a></li>
                     <li><a class="link " href="#">Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
                 </ul>
             </div>
