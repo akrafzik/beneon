@@ -502,7 +502,7 @@
                     (concat('".$img."tblPost/',P.postImagem)) as foto,
                     P.postImagem, url(postTitulo) as url
                      from tblPost P
-                            url(postTitulo) = :post";
+                            where url(postTitulo) = :post";
                         $query = $pdo->prepare( $sql );
 
                         $query->bindParam( ":post", $url );
