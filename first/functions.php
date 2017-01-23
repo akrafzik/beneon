@@ -624,7 +624,7 @@
                     $sql = "select L.leedID,
                     L.leedNome,
                     L.leedEmail,
-                    L.leedIP,
+                    L.leedIP, 
                     DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
                     ";
 
