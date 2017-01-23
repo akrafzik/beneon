@@ -110,7 +110,8 @@
                           swal({
                           title: "Obrigado!",
                           text: "Rumo a independencia financeira :)",
-                          imageUrl: "img/Logo.png"
+                          imageUrl: "img/Logo.png",
+                          imageSize: '220x90'
                         });
                       }
                   });

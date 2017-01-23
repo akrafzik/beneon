@@ -194,8 +194,12 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
-                                        $('#form1')[0].reset();
-                                        swal("Obrigado!", "Rumo a independência financeira!", "success");
+                                        $('#form3')[0].reset();
+                                        swal({
+                                        title: "Obrigado!",
+                                        text: "Rumo a independencia financeira :)",
+                                        imageUrl: "img/Logo.png",
+                                        imageSize: '220x90'
                                     }
                                 });
                             }, 1000);
@@ -212,8 +216,12 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
-                                        $('#form2')[0].reset();
-                                        swal("Obrigado!", "Rumo a independência financeira!", "success");
+                                        $('#form3')[0].reset();
+                                        swal({
+                                        title: "Obrigado!",
+                                        text: "Rumo a independencia financeira :)",
+                                        imageUrl: "img/Logo.png",
+                                        imageSize: '220x90'
                                     }
                                 });
                             }, 1000);
