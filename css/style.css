@@ -2,6 +2,11 @@ body {
     background-color: #fff;
 }
 
+.main_post_description p, ol, ol > li, h1, h2, h3, h4, h5, h6{
+  padding: 0!important;
+  margin: 0!important;
+}
+
 .row {
     padding: 0!important;
     margin: 0!important;
@@ -42,7 +47,6 @@ body {
     background-image: url('../img/LogoBranco.png');
 }
 
-
 /* img_cover */
 
 .img_cover {
@@ -56,10 +60,11 @@ body {
 }
 
 .backgroud-cover {
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 70px;
+    padding-top: 170px;
+    padding-bottom: 20px;
 }
 
 .backgroud-cover h1 {
@@ -70,12 +75,10 @@ body {
     font-size: 80px;
 }
 
-
 /* end img_cover*/
 
 
 /*detalhe page css*/
-
 .intro-header {
     background-color: #777777;
     background: no-repeat center center;
@@ -167,11 +170,18 @@ body {
     }
 }
 
+.links_footer a{
+  text-decoration: none!important;
+}
+
+.links_footer a:hover{
+  text-decoration: #4169E1;
+}
 
 /*end detalhe page css*/
 
 .main_content {
-    background-image: url('../img/midle.jpg');
+    background-color: #167D94;
     height: auto;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -206,11 +216,13 @@ body {
 .description_text {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 255, 255, 0.6);
+    background-color: #167D94;
     padding: 20px;
-    font-size: 3em;
+    font-size:2.6em;
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 .uk-card-footer a {
@@ -353,5 +365,8 @@ footer {
     }
     #logo-img{
       width: 210px;
+    }
+    .description_text{
+      font-size: 2em;
     }
 }

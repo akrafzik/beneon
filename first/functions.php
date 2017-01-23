@@ -922,5 +922,31 @@
                         return $results;
                     }
 
+                    function setAccess($url){
+                        global $pdo, $img;
+                        try {
+
+                        $stmt = $pdo->prepare( "update tblPost set postAcessos = postAcessos+1 where url(postTitulo) = :url" );
+                        $stmt->execute(
+                                array(
+                                    ":url" => $url
+                                )
+                        );
+                        $erro = $stmt->errorInfo();
+                        $valErro = $erro[ 0 ];
+                        if ( $valErro !== "00000" ) {
+                            insertLogs("insert", "Houve um erro em nosso servidor, tente novamente mais tarde, ou entre em contato conosco. (tblPost)");
+                            return array( "status" => false, "message" => "Houve um erro em nosso servidor, tente novamente mais tarde, ou entre em contato conosco.", "devMessage" => $erro );
+                        }
+                    }
+                    catch ( PDOException $e ) {
+                        insertLogs("insert", $e->getMessage()." (tblPost) ");
+                        return array( "status" => false, "message" => $e->getMessage() );
+                    }
+                        $id = $pdo->lastInsertId();
+                        insertLogs("insert", "Registro efetuado com sucesso! (tblPost)");
+                        return array( "status" => true, "message" => "Registro efetuado com sucesso!", "ID" => $id);
+                    }
+
 
                 ?>

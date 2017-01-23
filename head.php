@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <scrpit type="text/javascript" src="js/sweetalert.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <title>PLANEJECONQUISTE</title>

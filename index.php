@@ -38,7 +38,7 @@
             <div class="container-fluid">
                 <div class="col-md-4">
                     <div class="description_text">
-                        <p> Planeje e conquiste a sua independencia financeira.</p>
+                        <p> Planeje e conquiste a sua independência financeira.</p>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -97,9 +97,12 @@
             <div class="uk-modal-dialog">
                 <button class="uk-modal-close-full" type="button" uk-close></button>
                 <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
-                    <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
+                    <div class="uk-background-cover" style="background-image: url('img/fundo_modal.jpg');" uk-height-viewport></div>
                     <div class="uk-padding-large">
-                      <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
+
+                      <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
+
+                      <form class="form-horizontal" id="form2" onsubmit="cadastrarLeadPopup(); return false;">
                           <input type="hidden" value="cadastrarLead" name="exec">
                           <div class="form-group">
                               <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
@@ -124,8 +127,6 @@
                 </div>
             </div>
         </div>
-
-        <?php include('footer.php'); ?>
 
         <span id="page" style="display:none">1</span>
                 <span id="trigger" style="display:none">true</span>
@@ -176,11 +177,10 @@
                             }, 1000);
                         }
                     }
+
                     getPagination(1, 'scroll', 'res');
                     $("#trigger").html("true");
                     getPagination(1, 'maisLidos', 'post_read');
-
-
 
                     function cadastrarLead(){
                         setTimeout(function () {
@@ -194,13 +194,33 @@
                                         //console.log(data);
                                         $("#msg").html(data.message);
                                         $('#form1')[0].reset();
-
+                                        alert('Obrigado por se Cadastrar');
                                     }
                                 });
                             }, 1000);
                     }
+
+                    function cadastrarLeadPopup(){
+                        setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: $("#form2").serialize(),
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        //console.log(data);
+                                        $("#msg").html(data.message);
+                                        $('#form2')[0].reset();
+                                        swal("Obrigado!", "Rumo a independência financeira!", "success");
+                                    }
+                                });
+                            }, 1000);
+                    }
+
                 </script>
 
+                <?php include('footer.php'); ?>
 
 </body>
 
