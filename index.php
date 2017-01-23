@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="form_register">
-                        <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
+                        <p>Insira o seu endereço de email abaixo para receber gratuitamente as atualizações do blog.</p>
                         <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
                             <input type="hidden" value="cadastrarLead" name="exec">
                             <div class="form-group">
@@ -97,12 +97,18 @@
             <div class="uk-modal-dialog">
                 <button class="uk-modal-close-full" type="button" uk-close></button>
                 <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+<<<<<<< HEAD
                     <div class="uk-background-cover" style="background-image: url('img/fundo_modal.jpg');" uk-height-viewport></div>
                     <div class="uk-padding-large">
 
                       <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
 
                       <form class="form-horizontal" id="form2" onsubmit="cadastrarLeadPopup(); return false;">
+=======
+                    <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
+                    <div class="uk-padding-large">
+                      <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
+>>>>>>> ad565d131bb843416041856ec391397a8ad5e58e
                           <input type="hidden" value="cadastrarLead" name="exec">
                           <div class="form-group">
                               <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>

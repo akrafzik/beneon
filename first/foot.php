@@ -17,7 +17,17 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.file-input.js"></script>
-
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea",
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
+            }
+        });
+    </script>
     <script>$(window).ready(function(){$("input[type=file]").bootstrapFileInput();});</script>
 
     <!-- Morris Charts JavaScript
