@@ -33,13 +33,13 @@ header('Access-Control-Allow-Origin: *');
                             <div class="uk-card uk-card-default wow '.$slideIn.'" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: '.$slideIn.';">
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
-                                        <img src="first/upload/img/tblPost/'.$registro['postImagem'].'" alt="">
-                                        <div class="uk-position-center">
+                                        <a href="detalhes/'.$registro['url'].'"><img src="first/upload/img/tblPost/'.$registro['postImagem'].'" alt=""></a>
+                                        <!--<div class="uk-position-center">
                                             <div class="uk-transition-slide-top-small">
                                                 <h4 class="uk-margin-remove">Planeje</h4></div>
                                             <div class="uk-transition-slide-bottom-small">
                                                 <h4 class="uk-margin-remove">Conquiste</h4></div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
