@@ -129,11 +129,11 @@
                 </div>
             </div>
 
+            <?php include('footer.php'); ?>
+
         <span id="page" style="display:none">1</span>
                 <span id="trigger" style="display:none">true</span>
 
-                <script src=js/jquery.min.js></script>
-                <scrpit type="text/javascript" src="js/sweetalert.min.js"></script>
                 <script>
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
@@ -195,7 +195,7 @@
                                         //console.log(data);
                                         $("#msg").html(data.message);
                                         $('#form1')[0].reset();
-                                        alert('Obrigado por se Cadastrar');
+                                        swal("Obrigado!", "Rumo a independência financeira!", "success");
                                     }
                                 });
                             }, 1000);
@@ -221,7 +221,6 @@
 
                 </script>
 
-                <?php include('footer.php'); ?>
 
 </body>
 

@@ -15,6 +15,7 @@
 
         <p class="text-center">@2017Planejeconquiste. Todos os direitos reservados.</p>
 
+        <script type="text/javascript" src="js/sweetalert-dev.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/uikit.min.js"></script>

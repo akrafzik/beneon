@@ -107,7 +107,11 @@
                           //console.log(data);
                           $("#msg").html(data.message);
                           $('#form3')[0].reset();
-                          alert('Obrigado por se Cadastrar');
+                          swal({
+                          title: "Obrigado!",
+                          text: "Rumo a independencia financeira :)",
+                          imageUrl: "img/Logo.png"
+                        });
                       }
                   });
               }, 1000);
