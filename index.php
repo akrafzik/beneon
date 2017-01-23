@@ -10,13 +10,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-                    <a class="navbar-brand" href="#"><img id="logo-img" src="img/Logo.png"  height="100px" width="280px" alt=""></a>
+                    <a class="navbar-brand" href="#"><img id="logo-img" src="img/Logo.png" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="link" href="/">Home<br> <span class="glyphicon glyphicon-home"></span></a></li>
-                        <li><a class="link" href="#posts" uk-scroll>Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
-                        <li><a class="link " href="#form_cad" uk-scroll>Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
+                        <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a></li>
+                        <li class="link"><a class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             <div class="container-fluid">
                 <div class="col-md-4">
                     <div class="description_text">
-                        <p> Planeje e conquiste a sua independencia financeira.</p>
+                        <p> Planeje e conquiste a sua independência financeira.</p>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -93,10 +93,42 @@
             </div>
         </div>
 
+        <div id="modal-full" class="uk-modal-full" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-full" type="button" uk-close></button>
+                <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                    <div class="uk-background-cover" style="background-image: url('img/fundo_modal.jpg');" uk-height-viewport></div>
+                    <div class="uk-padding-large">
+
+                      <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
+
+                      <form class="form-horizontal" id="form2" onsubmit="cadastrarLeadPopup(); return false;">
+                          <input type="hidden" value="cadastrarLead" name="exec">
+                          <div class="form-group">
+                              <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                              <div class="col-sm-10">
+                                  <input type="email" name="emailLead" class="form-control" placeholder="Digite o seu email" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="col-sm-offset-2 col-sm-10">
+                                  <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                  <span id="msg"></span>
+                              </div>
+                          </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php include('footer.php'); ?>
-
-
-
 
         <span id="page" style="display:none">1</span>
                 <span id="trigger" style="display:none">true</span>
@@ -147,11 +179,10 @@
                             }, 1000);
                         }
                     }
+
                     getPagination(1, 'scroll', 'res');
                     $("#trigger").html("true");
                     getPagination(1, 'maisLidos', 'post_read');
-
-
 
                     function cadastrarLead(){
                         setTimeout(function () {
@@ -165,7 +196,24 @@
                                         //console.log(data);
                                         $("#msg").html(data.message);
                                         $('#form1')[0].reset();
+                                    }
+                                });
+                            }, 1000);
+                    }
 
+                    function cadastrarLeadPopup(){
+                        setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: $("#form2").serialize(),
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        //console.log(data);
+                                        $("#msg").html(data.message);
+                                        $('#form1')[0].reset();
+                                        swal("Bom Trabalho", "Rumo a Independência Finaceira", "success");
                                     }
                                 });
                             }, 1000);
