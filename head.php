@@ -10,12 +10,28 @@
       $img = "http://planejeconquiste.com.br/img/Logo.png";
       $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     ?>
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="http://www.planejeconquiste.com.br/"/>
+    <meta property="og:title" content="Planejamento Financeiro.">
+    <meta property="og:site_name" content="PlanejeConquiste">
+    <meta property="og:description" content="A melhor forma de administrar o seu dinheiro :)">
+    <meta property="og:image" content="http://www.planejeconquiste.com.br/img/Logo.png"/>
+    <meta property="og:image:type" content="png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+
+    <!--
+
     <meta name="description" content="<?=$desc?>">
     <meta property="og:type" content="article">
     <meta property="og:title" content="<?=$title?>">
     <meta property="og:image" content="<?=$img?>"/>
     <meta property="og:description" content="<?=$desc?>"/>
     <meta property="og:url" content="<?=$page?>"/>
+
+    -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
