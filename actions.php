@@ -24,7 +24,7 @@ header('Access-Control-Allow-Origin: *');
 	}
 	else if ( $exec == "scroll" ) {
         $pg = filter_input( INPUT_POST, 'pg' );
-        $registros = getRegistrosPost( $pg );
+        $registros = getRegistrosPost( $pg, null, array("postData", "desc") );
         $pg += 1;
         $html = '';
         $slideIn = "slideInLeft";
