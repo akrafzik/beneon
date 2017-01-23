@@ -19,7 +19,7 @@
               <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-right">
                       <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
-                        <li class="link"><a id="modalBtn" class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
+                        <li class="link"><a id="modalBtn" class="uk-button" href="#modal-full" uk-toggle data-uk-model="{bgclose: false, keyboard:false}"> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                   </ul>
               </div>
           </div>
