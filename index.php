@@ -16,7 +16,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
                         <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a></li>
-                        <li class="link"><a href="#form_cad" uk-scroll> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
+                        <li class="link"><a class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                     </ul>
                 </div>
             </div>
@@ -93,10 +93,39 @@
             </div>
         </div>
 
+        <div id="modal-full" class="uk-modal-full" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-full" type="button" uk-close></button>
+                <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                    <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
+                    <div class="uk-padding-large">
+                      <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
+                          <input type="hidden" value="cadastrarLead" name="exec">
+                          <div class="form-group">
+                              <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+                              <div class="col-sm-10">
+                                  <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                              <div class="col-sm-10">
+                                  <input type="email" name="emailLead" class="form-control" placeholder="Digite o seu email" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <div class="col-sm-offset-2 col-sm-10">
+                                  <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                  <span id="msg"></span>
+                              </div>
+                          </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php include('footer.php'); ?>
-
-
-
 
         <span id="page" style="display:none">1</span>
                 <span id="trigger" style="display:none">true</span>
