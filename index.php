@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="form_register">
-                        <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
+                        <p>Insira o seu endereço de email abaixo para receber gratuitamente as atualizações do blog.</p>
                         <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
                             <input type="hidden" value="cadastrarLead" name="exec">
                             <div class="form-group">
