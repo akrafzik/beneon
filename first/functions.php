@@ -625,7 +625,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    L.leedData from tblLeed L
+                    DATE_SUB( L.leedData, INTERVAL 2 HOUR ) AS as leedData from tblLeed L
                     ";
 
                     $results = array();
@@ -642,7 +642,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    L.leedData from tblLeed L
+                    DATE_SUB( L.leedData, INTERVAL 2 HOUR ) AS as leedData from tblLeed L
                             where leedID = :id";
                         $query = $pdo->prepare( $sql );
 
@@ -670,7 +670,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    L.leedData from tblLeed L
+                    DATE_SUB( L.leedData, INTERVAL 2 HOUR ) AS as leedData from tblLeed L
                     
                             " . $where . "
                             LIMIT " . $qtd . " OFFSET " . $finish;
