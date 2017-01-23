@@ -92,18 +92,7 @@
           </div>
 
     </section>
-    <?php
-      if(filter_input(INPUT_GET, "url") == "1-pergunta-sobre-financas-pessoais"){
-        ?>
-        <script>
-          $("window").ready(function(){
-            $("#modalBtn").trigger("click");
-            $(".uk-modal-close-full").fadeOut();
-          });
-        </script>
-        <?php
-      }
-    ?>
+    
     <script type="text/javascript">
       function cadastrarLeadPopupDetalhe(){
           $(".uk-modal-close-full").fadeIn();
@@ -130,6 +119,19 @@
     </script>
 
     <?php include('footer.php'); setAccess(filter_input(INPUT_GET, 'url')); ?>
+
+    <?php
+      if(filter_input(INPUT_GET, "url") == "1-pergunta-sobre-financas-pessoais"){
+        ?>
+        <script>
+          $("window").ready(function(){
+            $("#modalBtn").trigger("click");
+            $(".uk-modal-close-full").fadeOut();
+          });
+        </script>
+        <?php
+      }
+    ?>
 
 </body>
 </html>
