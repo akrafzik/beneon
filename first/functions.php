@@ -624,8 +624,8 @@
                     $sql = "select L.leedID,
                     L.leedNome,
                     L.leedEmail,
-                    L.leedIP,
-                    L.leedData from tblLeed L
+                    L.leedIP, 
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
                     ";
 
                     $results = array();
@@ -642,7 +642,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    L.leedData from tblLeed L
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
                             where leedID = :id";
                         $query = $pdo->prepare( $sql );
 
@@ -670,7 +670,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    L.leedData from tblLeed L
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
                     
                             " . $where . "
                             LIMIT " . $qtd . " OFFSET " . $finish;

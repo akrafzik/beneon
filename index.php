@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="form_register">
-                        <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
+                        <p>Insira o seu endereço de email abaixo para receber gratuitamente as atualizações do blog.</p>
                         <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
                             <input type="hidden" value="cadastrarLead" name="exec">
                             <div class="form-group">
@@ -103,6 +103,9 @@
                       <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
 
                       <form class="form-horizontal" id="form2" onsubmit="cadastrarLeadPopup(); return false;">
+                    <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
+                    <div class="uk-padding-large">
+                      <form class="form-horizontal" id="form1" onsubmit="cadastrarLead(); return false;">
                           <input type="hidden" value="cadastrarLead" name="exec">
                           <div class="form-group">
                               <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
@@ -132,7 +135,7 @@
                 <span id="trigger" style="display:none">true</span>
 
                 <script src=js/jquery.min.js></script>
-                <scrpit type="text/javascript" src="js/sweetalert.min.js"></script>  
+                <scrpit type="text/javascript" src="js/sweetalert.min.js"></script>
                 <script>
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
