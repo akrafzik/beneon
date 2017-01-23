@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/uikit.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <title><?=$title?></title>
@@ -40,8 +40,6 @@
   ga('send', 'pageview');
 
 </script>
-
-
 </head>
 
 <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">

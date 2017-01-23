@@ -353,6 +353,16 @@ footer {
     color: #a2cdd5;
 }
 
+.sa-icon sa-custom img{
+  width: 80%!important;
+  font-size: 50px;
+}
+
+element.style {
+    display: block!important;
+    width: 80%!important;
+    height: 85px!important;
+}
 
 /* End */
 
