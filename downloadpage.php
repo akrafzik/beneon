@@ -42,7 +42,7 @@
                 <div class="col-md-8 ">
                     <div class="form_register">
                         <p>Cadastre se na nossa plataforma para receber nossa planilha de controle de custo inteiramente gratis!</p>
-                        <form class="form-horizontal" id="form4" onsubmit="cadastrarLeadDownload(); return false;">
+                        <form class="form-horizontal" id="form6" onsubmit="cadastrarLeadDownloadPage(); return false;">
                             <input type="hidden" value="cadastrarLead" name="exec">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
@@ -101,6 +101,8 @@
                         </div>
                     </div>
                 </div>
+
+                <iframe id="invisible" style="display:none;"></iframe>
 
     </section>
 
@@ -163,7 +165,30 @@
 
                     function download() {
                         var iframe = document.getElementById('invisible');
-                        iframe.src = "download/planilha_custo.xlsx";
+                        iframe.src = "download/Planilha.xlsx";
+                    }
+
+                    function cadastrarLeadDownloadPage(){
+                        setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: $("#form6").serialize(),
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        //console.log(data);
+                                        $("#msg").html(data.message);
+                                        $('#form6')[0].reset();
+                                        swal({
+                                        title: "Obrigado!",
+                                        text: "Rumo a independencia financeira :)",
+                                        imageUrl: "img/Logo.png",
+                                        imageSize: '220x90'});
+                                        download();
+                                    }
+                                });
+                            }, 1000);
                     }
 
                     function cadastrarLeadPlanilha(){
