@@ -199,7 +199,7 @@
                                         title: "Obrigado!",
                                         text: "Rumo a independencia financeira :)",
                                         imageUrl: "img/Logo.png",
-                                        imageSize: '220x90'
+                                        imageSize: '220x90'});  
                                     }
                                 });
                             }, 1000);
@@ -221,7 +221,7 @@
                                         title: "Obrigado!",
                                         text: "Rumo a independencia financeira :)",
                                         imageUrl: "img/Logo.png",
-                                        imageSize: '220x90'
+                                        imageSize: '220x90'});
                                     }
                                 });
                             }, 1000);
