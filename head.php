@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <base href="/">
     <?php
-      $title = (trim($post['postTitulo']) != '' ? $post['postTitulo'] : "PLANEJECONQUISTE");
-      $desc = (trim($post['postResumo']) != '' ? nl2br($post['postResumo']) : "PLANEJE E CONQUISTE A SUA INDEPENDÊNCIA FINANCEIRA.");
+      $title = (trim($post['postTitulo']) != '' ? $post['postTitulo'] : "Planejamento Financeiro.");
+      $desc = (trim($post['postResumo']) != '' ? nl2br($post['postResumo']) : "A melhor forma de administrar o seu dinheiro :)");
       $img = "http://planejeconquiste.com.br/img/cover.jpg";
       $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     ?>
 
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="http://www.planejeconquiste.com.br/"/>
-    <meta property="og:title" content="Planejamento Financeiro.">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="<?=$page?>"/>
+    <meta property="og:title" content="<?=$title?>">
     <meta property="og:site_name" content="PlanejeConquiste">
-    <meta property="og:description" content="A melhor forma de administrar o seu dinheiro :)">
-    <meta property="og:image" content="http://www.planejeconquiste.com.br/img/Logo.png"/>
+    <meta property="og:description" content="<?=$desc?>">
+    <meta property="og:image" content="<?=$img?>"/>
     <meta property="og:image:type" content="png">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
