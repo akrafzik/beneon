@@ -100,9 +100,7 @@
                     <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
                         <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
                         <div class="uk-padding-large">
-
-                          <p>Insira o seu endereço de email abaixo, para receber gratuitamente as atualizações do blog.</p>
-
+                          <p class="text-title-register">Entre com seu nome e email abaixo para acessar a pesquisa. Não se preocupe, não enviaremos nenhum SPAM! ;).</p>
                           <form class="form-horizontal" id="form2" onsubmit="cadastrarLeadPopup(); return false;">
                               <input type="hidden" value="cadastrarLead" name="exec">
                               <div class="form-group">

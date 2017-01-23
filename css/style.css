@@ -31,6 +31,11 @@ body {
     color: #fff;
 }
 
+.text-title-register{
+  font-size: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .navbar-right {
     text-align: center;
 }
