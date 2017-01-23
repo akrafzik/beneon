@@ -56,7 +56,7 @@
           </div>
       </article>
 
-      <div id="modal-full" class="uk-modal-full" uk-modal>
+      <div id="modal-full" class="uk-modal-full" uk-modal esc-close="false">
               <div class="uk-modal-dialog">
                   <button class="uk-modal-close-full" type="button" uk-close></button>
                   <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
@@ -92,7 +92,7 @@
           </div>
 
     </section>
-    
+
     <script type="text/javascript">
       function cadastrarLeadPopupDetalhe(){
           $(".uk-modal-close-full").fadeIn();
