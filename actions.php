@@ -34,12 +34,12 @@ header('Access-Control-Allow-Origin: *');
                                 <div class="uk-inline-clip">
                                     <div class="uk-inline-clip uk-transition-toggle uk-light uk-transition-toggle">
                                         <a href="detalhes/'.$registro['url'].'"><img src="first/upload/img/tblPost/'.$registro['postImagem'].'" alt=""></a>
-                                        <div class="uk-position-center">
+                                        <!--<div class="uk-position-center">
                                             <div class="uk-transition-slide-top-small">
                                                 <h4 class="uk-margin-remove">Planeje</h4></div>
                                             <div class="uk-transition-slide-bottom-small">
                                                 <h4 class="uk-margin-remove">Conquiste</h4></div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                                 <div class="uk-card-body">
