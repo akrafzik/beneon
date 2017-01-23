@@ -132,7 +132,7 @@
                 <span id="trigger" style="display:none">true</span>
 
                 <script src=js/jquery.min.js></script>
-
+                <scrpit type="text/javascript" src="js/sweetalert.min.js"></script>  
                 <script>
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
