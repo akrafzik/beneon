@@ -257,6 +257,7 @@ body {
     color: #000;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 #message_top span {
@@ -292,6 +293,16 @@ footer {
     text-shadow: 1px 1px 1px #000;
 }
 
+/* Logo ID*/
+
+#logo-img{
+  position: absolute;
+  top:17px;
+  height:50px;
+  width:280px;
+}
+
+/* End logo*/
 
 /* Post */
 
@@ -339,5 +350,8 @@ footer {
     }
     .backgroud-cover h1 {
         font-size: 40px;
+    }
+    #logo-img{
+      width: 210px;
     }
 }

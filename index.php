@@ -10,12 +10,12 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-                    <a class="navbar-brand" href="#"><img id="logo-img" src="img/Logo.png"  height="100px" width="280px" alt=""></a>
+                    <a class="navbar-brand" href="#"><img id="logo-img" src="img/Logo.png" alt=""></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
-                        <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Blog</a></li>
+                        <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a></li>
                         <li class="link"><a href="#form_cad" uk-scroll> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                     </ul>
                 </div>
