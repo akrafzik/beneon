@@ -7,7 +7,7 @@
     <?php
       $title = (trim($post['postTitulo']) != '' ? $post['postTitulo'] : "PLANEJECONQUISTE");
       $desc = (trim($post['postResumo']) != '' ? nl2br($post['postResumo']) : "PLANEJE E CONQUISTE A SUA INDEPENDÊNCIA FINANCEIRA.");
-      $img = "http://planejeconquiste.com.br/img/Logo.png";
+      $img = "http://planejeconquiste.com.br/img/cover.jpg";
       $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     ?>
 
