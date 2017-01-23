@@ -19,7 +19,7 @@
               <div class="collapse navbar-collapse" id="myNavbar">
                   <ul class="nav navbar-nav navbar-right">
                       <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
-                        <li class="link"><a class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
+                        <li class="link"><a id="modalBtn" class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                   </ul>
               </div>
           </div>
@@ -92,9 +92,21 @@
           </div>
 
     </section>
-
+    <?php
+      if(filter_input(INPUT_GET, "url") == "1-pergunta-sobre-financas-pessoais"){
+        ?>
+        <script>
+          $("window").ready(function(){
+            $("#modalBtn").trigger("click");
+            $(".uk-modal-close-full").fadeOut();
+          });
+        </script>
+        <?php
+      }
+    ?>
     <script type="text/javascript">
       function cadastrarLeadPopupDetalhe(){
+          $(".uk-modal-close-full").fadeIn();
           setTimeout(function () {
                   $.ajax({
                       type: "POST",
