@@ -14,9 +14,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="link" href="/">Home<br> <span class="glyphicon glyphicon-home"></span></a></li>
-                        <li><a class="link" href="#posts" uk-scroll>Blog <br> <span class="glyphicon glyphicon-book"></span></a></li>
-                        <li><a class="link " href="#form_cad" uk-scroll>Assine Nosso Blog <br> <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
+                        <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Blog</a></li>
+                        <li class="link"><a href="#form_cad" uk-scroll> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
                     </ul>
                 </div>
             </div>
