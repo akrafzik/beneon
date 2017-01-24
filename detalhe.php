@@ -68,7 +68,7 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                                    <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome e Sobrenome" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -132,6 +132,8 @@
         <?php
       }
     ?>
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58878f36e953258c"></script>
 
 </body>
 </html>

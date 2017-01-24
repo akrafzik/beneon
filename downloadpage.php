@@ -47,7 +47,7 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                                    <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome e Sobrenome" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -81,7 +81,7 @@
                                   <div class="form-group">
                                       <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
                                       <div class="col-sm-10">
-                                          <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                                          <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome e Sobrenome" required>
                                       </div>
                                   </div>
                                   <div class="form-group">
