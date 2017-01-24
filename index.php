@@ -33,12 +33,15 @@
         </section>
     </header>
 
+    <iframe id="invisible" style="display:none;"></iframe>
+
     <section class="main_content" id="form_cad">
         <div class="row">
             <div class="container-fluid">
                 <div class="col-md-4">
                     <div class="description_text">
                         <p> Planeje e conquiste a sua independência financeira.</p>
+                        <a href="#modal-planilha" uk-toggle><button class="uk-button btn-download"> Clique aqui e baixe Nossa planilha de controle financeiro </button></a>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -127,6 +130,39 @@
                 </div>
             </div>
 
+            <div id="modal-planilha" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                            <div class="uk-background-cover" style="background-image: url('img/fundo.jpg');" uk-height-viewport></div>
+                            <div class="uk-padding-large">
+                              <p class="text-title-register"> Quase lá !! Digite o seu email abaixo para baixar a sua planilha é rapidinho !!   :)</p>
+                              <form class="form-horizontal" id="form8" onsubmit="baixarPlanilha(); return false;">
+                                  <input type="hidden" value="cadastrarLead" name="exec">
+                                  <div class="form-group">
+                                      <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+                                      <div class="col-sm-10">
+                                          <input type="text" name="nomeLead" class="form-control" placeholder="Digite o seu nome" required>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                                      <div class="col-sm-10">
+                                          <input type="email" name="emailLead" class="form-control" placeholder="Digite o seu email" required>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="col-sm-offset-2 col-sm-10">
+                                          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                          <span id="msg"></span>
+                                      </div>
+                                  </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <?php include('footer.php'); ?>
 
         <span id="page" style="display:none">1</span>
@@ -168,7 +204,7 @@
                                             }, 500);
                                         }
                                         else {
-                                            $("#" + target).append('<div class="col-md-12"><h3>Sem Mais Resultados...</h3></div>');
+                                            $("#" + target).append("<div class='col-md-12'><h5>Sem Mais Resultados...</h5></div>");
                                         }
                                         $("#" + target).fadeTo("slow", 1);
                                     }
@@ -223,6 +259,34 @@
                                     }
                                 });
                             }, 1000);
+                    }
+
+                    function baixarPlanilha(){
+                        setTimeout(function () {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "actions.php",
+                                    data: $("#form8").serialize(),
+                                    dataType: 'json',
+                                    processData: true,
+                                    success: function (data) {
+                                        //console.log(data);
+                                        $("#msg").html(data.message);
+                                        $('#form8')[0].reset();
+                                        swal({
+                                        title: "Obrigado!",
+                                        text: "Rumo a independencia financeira :)",
+                                        imageUrl: "img/Logo.png",
+                                        imageSize: '220x90'});
+                                        download();
+                                    }
+                                });
+                            }, 1000);
+                    }
+
+                    function download() {
+                        var iframe = document.getElementById('invisible');
+                        iframe.src = "download/Planilha.xlsx";
                     }
 
                 </script>
