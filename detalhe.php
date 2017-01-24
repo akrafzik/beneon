@@ -104,12 +104,14 @@
                       success: function (data) {
                           //console.log(data);
                           $("#msg").html(data.message);
-                          $('#form3')[0].reset();
-                          swal({
-                          title: "Obrigado!",
-                          text: "Rumo a independencia financeira :)",
-                          imageUrl: "img/Logo.png",
-                          imageSize: '220x90'});
+                          if(data.status){
+                            $('#form3')[0].reset();
+                            swal({
+                            title: "Obrigado!",
+                            text: "Rumo a independencia financeira :)",
+                            imageUrl: "img/Logo.png",
+                            imageSize: '220x90'});
+                          }
                       }
                   });
               }, 1000);

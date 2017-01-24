@@ -228,12 +228,15 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
-                                        $('#form1')[0].reset();
-                                        swal({
-                                        title: "Obrigado!",
-                                        text: "Rumo a independencia financeira :)",
-                                        imageUrl: "img/Logo.png",
-                                        imageSize: '220x90'});
+                                        if(data.status){
+                                            
+                                            $('#form1')[0].reset();
+                                            swal({
+                                            title: "Obrigado!",
+                                            text: "Rumo a independencia financeira :)",
+                                            imageUrl: "img/Logo.png",
+                                            imageSize: '220x90'});
+                                        }
                                     }
                                 });
                             }, 1000);
@@ -250,12 +253,14 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
-                                        $('#form2')[0].reset();
-                                        swal({
-                                        title: "Obrigado!",
-                                        text: "Rumo a independencia financeira :)",
-                                        imageUrl: "img/Logo.png",
-                                        imageSize: '220x90'});
+                                        if(data.status){
+                                            $('#form2')[0].reset();
+                                            swal({
+                                            title: "Obrigado!",
+                                            text: "Rumo a independencia financeira :)",
+                                            imageUrl: "img/Logo.png",
+                                            imageSize: '220x90'});
+                                        }
                                     }
                                 });
                             }, 1000);
@@ -272,13 +277,15 @@
                                     success: function (data) {
                                         //console.log(data);
                                         $("#msg").html(data.message);
-                                        $('#form8')[0].reset();
-                                        swal({
-                                        title: "Obrigado!",
-                                        text: "Rumo a independencia financeira :)",
-                                        imageUrl: "img/Logo.png",
-                                        imageSize: '220x90'});
-                                        download();
+                                        if(data.status){
+                                            $('#form8')[0].reset();
+                                            swal({
+                                            title: "Obrigado!",
+                                            text: "Rumo a independencia financeira :)",
+                                            imageUrl: "img/Logo.png",
+                                            imageSize: '220x90'});
+                                            download();
+                                        }
                                     }
                                 });
                             }, 1000);
