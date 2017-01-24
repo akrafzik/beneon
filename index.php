@@ -121,7 +121,7 @@
                               <div class="form-group">
                                   <div class="col-sm-offset-2 col-sm-10">
                                       <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-                                      <span id="msg"></span>
+                                      <span id="msg2"></span>
                                   </div>
                               </div>
                           </form>
@@ -154,7 +154,7 @@
                                   <div class="form-group">
                                       <div class="col-sm-offset-2 col-sm-10">
                                           <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
-                                          <span id="msg"></span>
+                                          <span id="msg3"></span>
                                       </div>
                                   </div>
                               </form>
@@ -252,7 +252,7 @@
                                     processData: true,
                                     success: function (data) {
                                         //console.log(data);
-                                        $("#msg").html(data.message);
+                                        $("#msg2").html(data.message);
                                         if(data.status){
                                             $('#form2')[0].reset();
                                             swal({
@@ -276,7 +276,7 @@
                                     processData: true,
                                     success: function (data) {
                                         //console.log(data);
-                                        $("#msg").html(data.message);
+                                        $("#msg3").html(data.message);
                                         if(data.status){
                                             $('#form8')[0].reset();
                                             swal({
