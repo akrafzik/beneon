@@ -6,8 +6,8 @@
                     </div>
                     <div class="col-md-8 links_footer">
                         <div class="col-md-4"><a href="/">SOBRE O BLOG</a></div>
-                        <div class="col-md-4"><a href="#posts">FINANÇAS PESSOAIS</a></div>
-                        <div class="col-md-4"><a href="#modal-planilha">MATERIAIS GRATUITOS</a></div>
+                        <div class="col-md-4"><a href="#posts" uk-scroll>FINANÇAS PESSOAIS</a></div>
+                        <div class="col-md-4"><a href="#form_cad" uk-scroll>MATERIAIS GRATUITOS</a></div>
                     </div>
                 </div>
             </div>
