@@ -189,7 +189,7 @@ body {
     background-color: #167D94;
     height: auto;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 22px;
 }
 
 .form_register {
@@ -198,8 +198,8 @@ body {
     text-align: center;
     font-size: 1.5em;
     padding: 20px;
-    padding-top: 24px;
-    padding-bottom: 34px;
+    padding-top: 45px;
+    padding-bottom: 33px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -267,6 +267,11 @@ body {
     color: #fff!important;
 }
 
+.uk-h5, h5 {
+    font-size: 16px;
+    line-height: 1.4;
+    color:#a2cdd5;
+}
 
 /* Menu */
 
@@ -317,6 +322,12 @@ footer {
   top:17px;
   height:50px;
   width:280px;
+}
+
+.btn-download{
+  background-color: #fff!important;
+  color: #15859f;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* End logo*/
