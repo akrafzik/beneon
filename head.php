@@ -7,7 +7,7 @@
     <?php
       $title = (trim($post['postTitulo']) != '' ? $post['postTitulo'] : "Planejamento Financeiro.");
       $desc = (trim($post['postResumo']) != '' ? nl2br($post['postResumo']) : "A melhor forma de administrar o seu dinheiro :)");
-      $img = "http://planejeconquiste.com.br/img/cover.jpg";
+      $img = (trim($post['postImagem']) != '' ? 'http://planejeconquiste.com.br/first/upload/img/tblPost/'.$post['postImagem'] : "http://planejeconquiste.com.br/img/cover.jpg");
       $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     ?>
 
