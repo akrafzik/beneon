@@ -14,9 +14,18 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="link"><a href="/"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a></li>
-                        <li class="link"><a href="#posts" uk-scroll> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a></li>
-                        <li class="link"><a class="uk-button" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a></li>
+                        <li class="link">
+                          <a href="/" class="hidden-xs"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a>
+                          <a href="/" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse"> <span class="glyphicon glyphicon-home"></span> <br/>Home</a>
+                        </li>
+                        <li class="link">
+                          <a href="#posts" uk-scroll class="hidden-xs"> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a>
+                          <a href="#posts" uk-scroll class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse"> <span class="glyphicon glyphicon-book"></span><br/>Finanças Pessoais</a>
+                        </li>
+                        <li class="link">
+                          <a class="uk-button hidden-xs" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a>
+                          <a class="uk-button visible-xs" data-toggle="collapse" data-target=".navbar-collapse" href="#modal-full" uk-toggle> <span class="glyphicon glyphicon-pencil"></span> <br/> Assine Nosso Blog </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -169,6 +178,7 @@
                 <span id="trigger" style="display:none">true</span>
 
                 <script>
+
                     $(document).ready(function () {
                         $(window).scroll(function (event) {
                             if ($('body').height() <= ($(window).height() + 400 + $(window).scrollTop())) {
