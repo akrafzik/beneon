@@ -229,7 +229,7 @@
                                         //console.log(data);
                                         $("#msg").html(data.message);
                                         if(data.status){
-                                            
+
                                             $('#form1')[0].reset();
                                             swal({
                                             title: "Obrigado!",
