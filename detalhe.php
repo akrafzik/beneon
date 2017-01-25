@@ -56,7 +56,7 @@
           </div>
 
           <div id="fb-root"></div>
-          <div class="fb-comments" data-href="http://planejeconquiste.com.br/" data-numposts="5"></div>
+          <div class="fb-comments" data-href="<?=$page?>" data-numposts="5"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
