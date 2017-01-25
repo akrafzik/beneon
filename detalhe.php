@@ -54,6 +54,17 @@
                   </div>
               </div>
           </div>
+
+          <div id="fb-root"></div>
+          <div class="fb-comments" data-href="http://planejeconquiste.com.br/" data-numposts="5"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1523794240968015";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
       </article>
 
       <div id="modal-full" class="uk-modal-full" uk-modal esc-close="false">
@@ -117,6 +128,7 @@
               }, 1000);
       }
     </script>
+
 
     <?php include('footer.php'); setAccess(filter_input(INPUT_GET, 'url')); ?>
 
