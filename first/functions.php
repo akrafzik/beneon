@@ -625,7 +625,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP, 
-                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i') as leedData from tblLeed L
                     ";
 
                     $results = array();
@@ -642,7 +642,7 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i') as leedData from tblLeed L
                             where leedID = :id";
                         $query = $pdo->prepare( $sql );
 
@@ -658,7 +658,7 @@
                         exit;
                     }
                 }
-                function gettblLeedPaginacao( $pg = 1, $filtro = NULL, $qtd = 20 ) {
+                function gettblLeedPaginacao( $pg = 1, $filtro = NULL, $qtd = 100 ) {
                     global $img;
 
                     $finish = ($pg - 1) * $qtd;
@@ -670,10 +670,16 @@
                     L.leedNome,
                     L.leedEmail,
                     L.leedIP,
-                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i:%s') as leedData from tblLeed L
+                    DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i') as leedData from tblLeed L
                     
                             " . $where . "
-                            LIMIT " . $qtd . " OFFSET " . $finish;
+                            group by 
+                            L.leedID,
+                            L.leedNome,
+                            L.leedEmail,
+                            L.leedIP,
+                            DATE_FORMAT(DATE_SUB(leedData, INTERVAL 2 HOUR) , '%d/%m/%Y %H:%i')
+                        LIMIT " . $qtd . " OFFSET " . $finish;
                     //die(json_encode($sql));
 
                     $pagina = getQuery( $sql );
