@@ -1,4 +1,5 @@
 <?php include('head.php'); ?>
+<script>fbq('track', '<EVENT_NAME>');</script>
 
 <body>
     <header>
@@ -213,6 +214,9 @@
                             }, 1000);
                     }
 
+                </script>
+                <script>
+                fbq('track', 'Lead');
                 </script>
 </body>
 
