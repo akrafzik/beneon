@@ -13,6 +13,9 @@ RewriteRule ^(.*)$ $1.php
                 RewriteRule detalhes/([a-z,0-9,A-Z,_-]+)/ detalhe.php?url=$1
                 RewriteRule detalhes/([a-z,0-9,A-Z,_-]+) detalhe.php?url=$1
 
+                RewriteRule sexta-feira/ sextafeira.php
+                RewriteRule sexta-feira/ sextafeira.php
+
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault A300
