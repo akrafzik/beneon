@@ -1,6 +1,88 @@
-<?php include('head.php'); ?>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <base href="/">
+    <?php
+      $title = (trim($post['postTitulo']) != '' ? $post['postTitulo'] : "Planejamento Financeiro.");
+      $desc = (trim($post['postResumo']) != '' ? nl2br($post['postResumo']) : "A melhor forma de administrar o seu dinheiro :)");
+      $img = (trim($post['postImagem']) != '' ? 'http://planejeconquiste.com.br/first/upload/img/tblPost/'.$post['postImagem'] : "http://planejeconquiste.com.br/img/cover.jpg");
+      $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-<body>
+      $arrayName = array( 1 => "img/planejeconquiste_sexta1.gif",
+                          2 => "img/planejeconquiste_sexta2.gif",
+                          3 => "img/planejeconquiste_sexta3.gif",
+                          4 => "img/planejeconquiste_sexta4.gif",
+                          5 => "img/planejeconquiste_sexta5.gif",
+                          6 => "img/planejeconquiste_sexta6.gif",
+                          7 => "img/planejeconquiste_sexta7.gif",
+                          8 => "img/planejeconquiste_sexta8.gif",
+                          9 => "img/planejeconquiste_sexta9.gif");
+
+                          $min=1;
+                          $max=9;
+                          $number =  rand($min,$max);
+
+    ?>
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="<?=$page?>"/>
+    <meta property="og:title" content="Hoje é sexta !!!!!">
+    <meta property="og:site_name" content="PlanejeConquiste">
+    <meta property="og:description" content="Hoje minha sexta vai ser assim :)">
+    <meta property="og:image" content="img/gif_1.jpeg"/>
+    <meta property="og:image:type" content="jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <title><?=$title?></title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90726734-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '682993335209248'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=682993335209248&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+<link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<body style="background-color:#ccc;">
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -31,8 +113,13 @@
 
     <section class="body_gif">
         <div class="container">
-
-        </div>
+            <div class="git_img">
+              <img src="<?= $arrayName[$number] ?>">
+              <div class="addthis_inline_share_toolbox">
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58878f36e953258c"></script>
+              </div>
+            </div>
+      </div>
 
         <div id="modal-full" class="uk-modal-full" uk-modal esc-close="false">
                 <div class="uk-modal-dialog">
@@ -82,7 +169,7 @@
                                 getPagination($("#page").html(), 'scroll', 'res');
                             }
                         });
-                        $(".action_gif").trigger("click");
+                        /* $(".action_gif").trigger("click"); */
                     });
 
                     function getPagination(pg, request, target) {

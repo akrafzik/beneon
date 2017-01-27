@@ -456,11 +456,40 @@ element.style {
     height: 85px!important;
 }
 
+/* End */
+
+/* Inicio sextafeira.php */
+
 .body_gif{
   height: 800px;
 }
 
-/* End */
+.git_img{
+  padding-top: 220px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.at-resp-share-element .at-share-btn {
+    display: inline-block;
+    margin: 0 2px 5px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-decoration: none;
+    text-transform: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border: 0;
+    font-family: helvetica neue,helvetica,arial,sans-serif;
+    background-color: transparent;
+    margin-top: 20px!important;
+    width: 302px;
+}
+
+/* End sextafeira.php */
 
 @media only screen and (max-width: 768px) {
     .navbar-header {
