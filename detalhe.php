@@ -54,17 +54,19 @@
                   </div>
               </div>
           </div>
+          <br><br>
+          <div class="comments">
+            <div id="fb-root"></div>
+            <div class="fb-comments" data-href="<?=$page?>" data-numposts="5"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1523794240968015";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-          <div id="fb-root"></div>
-          <div class="fb-comments" data-href="<?=$page?>" data-numposts="5"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1523794240968015";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
+          </div>
       </article>
 
       <div id="modal-full" class="uk-modal-full" uk-modal esc-close="false">
@@ -144,6 +146,6 @@
         <?php
       }
     ?>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58878f36e953258c"></script> 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58878f36e953258c"></script>
 </body>
 </html>

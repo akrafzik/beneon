@@ -420,7 +420,6 @@ footer {
     display: inline-flex;
 }
 
-
 /* Fim Post */
 
 
@@ -442,6 +441,10 @@ footer {
     color: #a2cdd5;
 }
 
+.comments{
+  text-align: center;
+}
+
 .sa-icon sa-custom img{
   width: 80%!important;
   font-size: 50px;
@@ -451,6 +454,10 @@ element.style {
     display: block!important;
     width: 80%!important;
     height: 85px!important;
+}
+
+.body_gif{
+  height: 500px;
 }
 
 /* End */
