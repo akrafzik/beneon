@@ -461,13 +461,19 @@ element.style {
 /* Inicio sextafeira.php */
 
 .body_gif{
-  height: 800px;
+  height: auto;
 }
 
 .git_img{
   padding-top: 220px;
   margin-bottom: 20px;
   text-align: center;
+  padding-bottom: 200px;
+}
+
+.git_img p{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .at-resp-share-element .at-share-btn {

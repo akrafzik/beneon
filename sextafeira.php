@@ -9,15 +9,15 @@
       $img = (trim($post['postImagem']) != '' ? 'http://planejeconquiste.com.br/first/upload/img/tblPost/'.$post['postImagem'] : "http://planejeconquiste.com.br/img/cover.jpg");
       $page = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
-      $arrayName = array( 1 => "img/planejeconquiste_sexta1.gif",
-                          2 => "img/planejeconquiste_sexta2.gif",
-                          3 => "img/planejeconquiste_sexta3.gif",
-                          4 => "img/planejeconquiste_sexta4.gif",
-                          5 => "img/planejeconquiste_sexta5.gif",
-                          6 => "img/planejeconquiste_sexta6.gif",
-                          7 => "img/planejeconquiste_sexta7.gif",
-                          8 => "img/planejeconquiste_sexta8.gif",
-                          9 => "img/planejeconquiste_sexta9.gif");
+      $arrayName = array( 1 => "img/gif_1",
+                          2 => "img/gif_2",
+                          3 => "img/gif_3",
+                          4 => "img/gif_4",
+                          5 => "img/gif_5",
+                          6 => "img/gif_6",
+                          7 => "img/gif_7",
+                          8 => "img/gif_8",
+                          9 => "img/gif_9");
 
                           $min=1;
                           $max=9;
@@ -26,11 +26,11 @@
     ?>
 
     <meta property="og:locale" content="pt_BR">
-    <meta property="og:url" content="<?=$page?>"/>
+    <meta property="og:url" content="http://planejeconquiste.com.br/sextafeira.php"/>
     <meta property="og:title" content="Hoje é sexta !!!!!">
     <meta property="og:site_name" content="PlanejeConquiste">
-    <meta property="og:description" content="Hoje minha sexta vai ser assim :)">
-    <meta property="og:image" content="img/gif_1.jpeg"/>
+    <meta property="og:description" content="Hoje minha sexta vai ser assim e a sua ?">
+    <meta property="og:image" content="http://planejeconquiste.com.br/<?= $arrayName[$number] . '.jpeg' ?>"/>
     <meta property="og:image:type" content="jpeg">
     <meta property="og:image:width" content="800">
     <meta property="og:image:height" content="600">
@@ -114,7 +114,9 @@ src="https://www.facebook.com/tr?id=682993335209248&ev=PageView&noscript=1"
     <section class="body_gif">
         <div class="container">
             <div class="git_img">
-              <img src="<?= $arrayName[$number] ?>">
+              <p> SUA SEXTA-FEIRA VAI SER ASSIM: </p>
+              <img src="<?= $arrayName[$number] . '.gif'?>">
+              <p> CURTIU? COMPARTILHE E MARQUE SEUS AMIGOS! </p>
               <div class="addthis_inline_share_toolbox">
                 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58878f36e953258c"></script>
               </div>
