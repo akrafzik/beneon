@@ -1,7 +1,7 @@
 <?php
-  if(filter_input(INPUT_GET, 'generate') != ''){
+  if(filter_input(INPUT_GET, 'generate') == ''){
     echo "<script>window.location = '?generate=".date("dmYHis")."';</script>";
-    
+
   }
 ?>
 <!DOCTYPE html>
